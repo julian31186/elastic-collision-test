@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <style>
+
+        html, body {
+            overflow: hidden;
+            height: 100%;
+        }
+
+        input {
+            width: 8rem;
+            height: 2rem;
+            font-size: 20px;
+        }
+
+        .ball {
+            position: absolute;
+            height: 80px;
+            width: 80px;
+            background-color: black;
+            border-radius: 50%;
+            margin-bottom: 15rem;
+        }
+
+        .animation-indicator {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            margin-right: 30px;
+            margin-top: 35px;
+            background-color: #FC6949;
+        }
+
+        #b1 {
+            left: 0px;
+        }
+
+        #b2 {
+            right: 0px;
+        }
+
+        .entries {
+            display: flex;
+            justify-content: center;
+        }
+
+        .entry {
+            display: flex;
+            padding: 1rem;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;   
+        }
+
+    </style>
+    <head>
+        <title>Physics</title>
+    </head>
+
+
+    <div class="entries">
+
+        <div id="animation-indicator" class="animation-indicator"></div>
+
+        <div class="entry">
+            <h3><b>Ball 1</b></h3>
+            Mass (lbs): <input type="number" id="b1-mass"></input>
+            Velocity (px/s): <input type="number" id="b1-velocity"></input>
+        </div>
+
+        <div class="entry">
+            <h3><b>Ball 2</b></h3>
+            Mass (lbs): <input type="number" id="b2-mass"></input>
+            Velocity (px/s): <input type="number" id="b2-velocity"></input>
+        </div>
+
+    </div>
+    
+    <div class="container">
+        <div id="b1" class="ball"></div>
+        <div id="b2" class="ball"></div>
+    </div>
+    <script src="index.js"></script>
+</html>
